@@ -1,13 +1,13 @@
 <gm:page title="Bible Links" authenticate="false">
   <h2>Bible Links</h2>
   <p>This is a work-in-progress.</p>
-  <gm:list id="bkList" data="http://technocrat7.googlepages.com/bks.rss" template="books_old"  pagesize="10"/>
-  <gm:template id="books">
+  <gm:list id="bkList" data="http://technocrat7.googlepages.com/bks.rss" template="books"  pagesize="10"/>
+  <gm:template id="books_debug">
     <div repeat="true" style="border:1px solid gray;padding:5px;margin:10px">
       <gm:debug ref="."/>
     </div>
   </gm:template>
-  <gm:template id="books_old">
+  <gm:template id="books">
   <table class="gm-table">
       <thead>
         <tr>
