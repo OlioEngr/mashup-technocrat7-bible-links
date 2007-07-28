@@ -8,9 +8,6 @@
     </div>
   </gm:template>
   <gm:template id="books_old">
-    <div repeat="true" style="border:1px solid gray;padding:5px;margin:10px">
-      <gm:debug ref="."/>
-    </div>
   <table class="gm-table">
       <thead>
         <tr>
