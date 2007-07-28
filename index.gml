@@ -22,7 +22,7 @@
       </thead>
       <tr repeat="true">
         <td><gm:text ref="ns:Bible/Book_Name" default=""/></td>
-        <td><gm:number ref="ns:Bible/id" default="3" size="3"/></td>
+        <td><gm:number ref="ns:Bible[@attr='id']" default="3" size="3"/></td>
         <td><gm:text ref="ns:Bible/ESV" hint="Enter comment."/></td>
         <td><gm:editButtons/></td>
       </tr>
