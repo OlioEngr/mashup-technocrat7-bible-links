@@ -1,7 +1,7 @@
 <gm:page title="Bible Links" authenticate="false">
   <h2>Bible Links</h2>
   <p>This is a work-in-progress.</p>
-  <gm:list id="bkList" data="http://technocrat7.googlepages.com/bks.rss" template="books"/>
+  <gm:list id="bkList" data="http://technocrat7.googlepages.com/bks.rss" template="books_old"  pagesize="10"/>
   <gm:template id="books">
     <div repeat="true" style="border:1px solid gray;padding:5px;margin:10px">
       <gm:debug ref="."/>
