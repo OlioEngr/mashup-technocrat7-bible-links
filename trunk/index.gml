@@ -1,6 +1,14 @@
 <gm:page title="Bible Links" authenticate="false">
   <gm:list id="bkList" data="http://technocrat7.googlepages.com/bks.xml" template="books"/>
   <gm:template id="books">
+    <div repeat="true" style="border:1px solid gray;padding:5px;margin:10px">
+      <gm:debug ref="."/>
+    </div>
+  </gm:template>
+  <gm:template id="books_old">
+    <div repeat="true" style="border:1px solid gray;padding:5px;margin:10px">
+      <gm:debug ref="."/>
+    </div>
   <table class="gm-table">
       <thead>
         <tr>
@@ -17,7 +25,7 @@
         <td><gm:editButtons/></td>
       </tr>
     </table>  
-</gm:template>
+  </gm:template>
   
 
 </gm:page>
