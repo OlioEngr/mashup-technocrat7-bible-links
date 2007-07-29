@@ -12,7 +12,7 @@
           <th width="200">ESV Link</th>
           <th width="30"></th>
         </tr>
-      </thead>
+      </thead>            
       <tr repeat="true">
         <td><gm:text ref="tchncrt:Book_Name" default=""/></td>
         <td><gm:number ref="tchncrt:No" default="3" size="3"/></td>
