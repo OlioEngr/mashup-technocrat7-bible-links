@@ -17,7 +17,7 @@
         </tr>
       </thead>            
       <tr repeat="true">
-        <td><gm:text ref="tchncrt:Book_Name" default=""/></td>
+        <td><gm:text ref="tchncrt:Book-Name" default=""/></td>
         <td><gm:number ref="tchncrt:No" default="3" size="3"/></td>
         <td><gm:text ref="tchncrt:ESV" hint="Enter comment."/></td>
         <td><gm:editButtons/></td>
