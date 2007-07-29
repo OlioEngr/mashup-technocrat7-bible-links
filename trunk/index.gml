@@ -2,7 +2,7 @@
   
       <h2>Bible Links</h2>
   <p>This is a work-in-progress.</p>
-  <gm:list id="bkList" data="http://code.google.com/p/mashup-technocrat7-bible-links/resources/bks.xml" template="books" />
+  <gm:list id="bkList" data="http://technocrat7.googlepages.com/bks.xml" template="books" />
   <gm:template id="books">
   <table class="gm-table">
       <thead>
