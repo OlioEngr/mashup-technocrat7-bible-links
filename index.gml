@@ -2,7 +2,7 @@
   
       <h2>Bible Links</h2>
   <p>This is a work-in-progress.</p>
-  <gm:list id="bkList" data="http://technocrat7.googlepages.com/bks.xml" template="books" />
+  <gm:list id="bkList" data="http://technocrat7.googlepages.com/bks0.xml" template="books" />
   <gm:template id="books">
     <div repeat="true" style="border:1px solid gray;padding:5px;margin:10px">
       <gm:debug ref="."/>
