@@ -1,9 +1,50 @@
 <gm:page title="Bible Links" authenticate="false">
+
+  <style>
+    #myTable td {
+      padding-bottom: 15px;
+      padding-right: 10px;
+      vertical-align: top;
+    }
+  </style>
   
+  <script>
+    function buildTable() {
+      var titleGPath = new GPath('atom:title');
+      var contentGPath = new GPath('atom:content');
+      
+      var bkList = google.mashups.getObjectById('bkList');
+      
+      var bkTable = document.getElementById('bkTable');
+      bkTable.innerHTML = '';
+    
+      var newRow = document.createElement('tr');
+      for (var i=0; i<bkList.getData().size(); i++) {
+        var entry = bkList.getData().entryAt(i);
+    
+        var newCell = document.createElement('td');
+        newCell.innerHTML = '<b>'+titleGPath.getValue(entry)+'</b><br/>';
+        newCell.innerHTML += contentGPath.getValue(entry);
+        newRow.appendChild(newCell);
+        
+        if ((i+1)%10 == 0) {
+          bkTable.appendChild(newRow);
+          newRow = document.createElement('tr');
+        }
+      }
+    }
+  </script>
+  
+      
       <h2>Bible Links</h2>
   <p>This is a work-in-progress.</p>
-  <gm:list id="bkList" data="http://technocrat7.googlepages.com/bks2.xml" template="books" />
-  <gm:template id="books">
+  <gm:list id="bkList" data="http://technocrat7.googlepages.com/bks2.xml" pagesize="20" style="display:none">
+    <gm:handleEvent event="repaint" execute="buildTable()"/>
+  </gm:list>  
+
+  <table id="bkTable"></table>    
+
+      <gm:template id="books">
     <div repeat="true" style="border:1px solid gray;padding:5px;margin:10px">
       <gm:debug ref="."/>
     </div>
