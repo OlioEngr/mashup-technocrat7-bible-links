@@ -9,6 +9,15 @@
   </style>
   
   <script>
+    function stripFldName(str) {
+      var pos = str.indexOf(":")
+      return str.substr(pos + 1, str.length);
+    }
+//    function getValue(str, fld) {
+//      var pos = str.indexOf(fld + ":");
+//      return "";
+//    }
+
     function buildTable() {
       var titleGPath = new GPath('atom:title');
       var contentGPath = new GPath('atom:content');
@@ -23,14 +32,24 @@
         var entry = bkList.getData().entryAt(i);
     
         var newCell = document.createElement('td');
+        var vals = contentGPath.getValue(entry).split(",");
         newCell.innerHTML = '<b>'+titleGPath.getValue(entry)+'</b><br/>';
-        newCell.innerHTML += contentGPath.getValue(entry);
+//        newCell.innerHTML += contentGPath.getValue(entry);
         newRow.appendChild(newCell);
-        
-        if ((i+1)%10 == 0) {
+        var newCell = document.createElement('td');    
+        newCell.innerHTML = stripFldName(vals[0]);
+        newRow.appendChild(newCell);
+        var newCell = document.createElement('td');    
+        newCell.innerHTML = stripFldName(vals[1]);
+        newRow.appendChild(newCell);
+        var newCell = document.createElement('td');    
+        newCell.innerHTML = stripFldName(vals[2]);
+        newRow.appendChild(newCell);
+
+        //if ((i+1)%10 == 0) {
           bkTable.appendChild(newRow);
           newRow = document.createElement('tr');
-        }
+        //}
       }
     }
   </script>
@@ -38,7 +57,7 @@
       
       <h2>Bible Links</h2>
   <p>This is a work-in-progress.</p>
-  <gm:list id="bkList" data="http://spreadsheets.google.com/feeds/list/o11070467743159310010.8474335362509380687/oda/public/basic" pagesize="20" style="display:none">
+  <gm:list id="bkList" data="http://spreadsheets.google.com/feeds/list/o11070467743159310010.8474335362509380687/oda/public/basic" pagesize="70" style="display:none">
     <gm:handleEvent event="repaint" execute="buildTable()"/>
   </gm:list>  
 
