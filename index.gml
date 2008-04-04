@@ -38,7 +38,7 @@
       
       <h2>Bible Links</h2>
   <p>This is a work-in-progress.</p>
-  <gm:list id="bkList" data="http://technocrat7.googlepages.com/bks2.xml" pagesize="20" style="display:none">
+  <gm:list id="bkList" data="http://spreadsheets.google.com/feeds/list/o11070467743159310010.8474335362509380687/oda/public/basic" pagesize="20" style="display:none">
     <gm:handleEvent event="repaint" execute="buildTable()"/>
   </gm:list>  
 
