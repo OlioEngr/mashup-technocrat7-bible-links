@@ -36,18 +36,25 @@
         newCell.innerHTML = '<b>'+titleGPath.getValue(entry)+'</b><br/>';
 //        newCell.innerHTML += contentGPath.getValue(entry);
         newRow.appendChild(newCell);
+
         var newCell = document.createElement('td');    
-        newCell.innerHTML = stripFldName(vals[0]);
-        newCell.href = "http://technocrat7.googlepages.com/";
+        newCell.innerHTML = '<a href="http://technocrat7.googlepages.com/">' + stripFldName(vals[0]) + '</a>';
+//        newCell.href = "http://technocrat7.googlepages.com/";
         newRow.appendChild(newCell);
+
         var newCell = document.createElement('td');    
         newCell.innerHTML = stripFldName(vals[1]);
         newRow.appendChild(newCell);
+
         var newCell = document.createElement('td');    
         newCell.innerHTML = stripFldName(vals[2]);
         newRow.appendChild(newCell);
 
-        //if ((i+1)%10 == 0) {
+        var newCell = document.createElement('td');    
+        newCell.innerHTML = '<a href="http://www.gnpcb.org/esv/search/?q=' + stripFldName(vals[8]) + '+1">ESV</a>';
+        newRow.appendChild(newCell);
+
+            //if ((i+1)%10 == 0) {
           bkTable.appendChild(newRow);
           newRow = document.createElement('tr');
         //}
