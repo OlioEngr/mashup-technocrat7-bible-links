@@ -1,4 +1,4 @@
-gm:page title="Bible Links" authenticate="false">
+<gm:page title="Bible Links" authenticate="false">
 
   <style>
     #myTable td {
