@@ -1,4 +1,4 @@
-<gm:page title="Bible Links" authenticate="false">
+gm:page title="Bible Links" authenticate="false">
 
   <style>
     #myTable td {
@@ -38,6 +38,7 @@
         newRow.appendChild(newCell);
         var newCell = document.createElement('td');    
         newCell.innerHTML = stripFldName(vals[0]);
+        newCell.href = "http://technocrat7.googlepages.com/";
         newRow.appendChild(newCell);
         var newCell = document.createElement('td');    
         newCell.innerHTML = stripFldName(vals[1]);
