@@ -10,7 +10,7 @@
   
   <script>
     function stripFldName(str) {
-      var pos = str.indexOf(":")
+      var pos = str.indexOf(":");
       return str.substr(pos + 1, str.length);
     }
 //    function getValue(str, fld) {
@@ -43,7 +43,7 @@
         newRow.appendChild(newCell);
 
         var newCell = document.createElement('td');    
-        newCell.innerHTML = stripFldName(vals[1]) + ' ';
+        newCell.innerHTML = stripFldName(vals[1])+ ' ';
         newRow.appendChild(newCell);
 
         var newCell = document.createElement('td');    
@@ -51,11 +51,11 @@
         newRow.appendChild(newCell);
 
         var newCell = document.createElement('td');    
-        newCell.innerHTML = '<a href="http://www.gnpcb.org/esv/search/?q=' + stripFldName(vals[8]) + '+1">[ESV]</a> ';
+        newCell.innerHTML = '<a href="http://www.gnpcb.org/esv/search/?q=' + stripFldName(vals[7]).replace(" ", "") + '+1">[ESV]</a> ';
         newRow.appendChild(newCell);
 
         var newCell = document.createElement('td');    
-        newCell.innerHTML = '<a href="http://net.bible.org/bible.php?book=' + stripFldName(vals[9]) + '">[NET]</a> ';
+        newCell.innerHTML = '<a href="http://net.bible.org/bible.php?book=' + stripFldName(vals[8]).replace(" ", "") + '">[NET]</a> ';
         newRow.appendChild(newCell);
     
             //if ((i+1)%10 == 0) {
